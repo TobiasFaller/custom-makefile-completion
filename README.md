@@ -18,7 +18,7 @@ How to install
 
 Run the following command inside your bash-completion installation folder to apply the custom extension.
 Make sure to set `BASH_COMPLETION_MAKE_ENABLE_MAKEFILE_TARGET` to `1` in your global `.bashrc` or `.bash_profile` configuration to enable / test the feature.
-Be aware that this has security implications because activating the auto-completion in untrusted environments automatically executes the `.BASH-COMPLETION` target.
+Be aware that this has security implications because activating the auto-completion in untrusted environments automatically executes the `.BASH-COMPLETION` Makefile target.
 
 ```bash
 #!/bin/sh
