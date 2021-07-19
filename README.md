@@ -13,6 +13,20 @@ Configuration options:
 - `BASH_COMPLETION_MAKE_ENABLE_MAKEFILE_TARGET`: Enables the feature (Default is "0")
 - `BASH_COMPLETION_MAKE_MAKEFILE_TARGET`: Specifies Makefile target to execute (Default is ".BASH-COMPLETION")
 
+How to install
+--------------
+
+Run the following command inside your bash-completion installation folder to apply the custom extension.
+Make sure to set `BASH_COMPLETION_MAKE_ENABLE_MAKEFILE_TARGET` to `1` in your global `.bashrc` or `.bash_profile` configuration to enable / test the feature.
+Be aware that this has security implications because activating the auto-completion in untrusted environments automatically executes the `.BASH-COMPLETION` target.
+
+```bash
+#!/bin/sh
+
+wget https://raw.githubusercontent.com/TobiasFaller/custom-makefile-completion/main/custom-makefile-completion.patch
+git apply --check --apply custom-makefile-completion.patch
+```
+
 How to use
 ----------
 
